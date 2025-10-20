@@ -1,4 +1,4 @@
-
+tasks = []
 def Menu():
     print("1. Create Task\n2. Change Task\n3. Delite Task\n4. Show Task")
     choice = input("Input User: ")
@@ -15,7 +15,10 @@ def Menu():
 
     return "a0"
 def CreateTask():
-    print("TaskCreated")
+    task = input("Task: ")
+    tasks.append(task)
+    return  f"Task Append: {tasks}"
+
 
 
 def ChangeTask():
@@ -27,7 +30,7 @@ def DeliteTask():
 
 
 def ShowTask():
-    print("Task Show")
+    return tasks
 
 
 
