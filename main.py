@@ -26,9 +26,16 @@ def ChangeTask():
 
 
 def DeliteTask():
-    print("TaskDelite")
-
-
+    if not tasks:
+        return "0 tasks"
+    else:
+        print (f"Tasks:{tasks}")
+        num = int(input("Number task for delite: "))-1
+        if 0 <= num <= len(tasks):
+            RemovedTask = tasks.pop(num)
+            return f"Task {RemovedTask} delited"
+        else:
+            return("the number is incorrect")
 def ShowTask():
     return tasks
 
